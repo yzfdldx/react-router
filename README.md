@@ -1,7 +1,7 @@
 
 ## react router
 ## 依赖react模块 
-
+** 版权属于yzflhez@126.com
 #### \<Router history={hashHistory} \>\</Router\> 外包模块数据处理
 #### \<Redirect from="/" to="/index" /\> 重定向
 #### \<Route path="/" component={Ass}/\> 路由

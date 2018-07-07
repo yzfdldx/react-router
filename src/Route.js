@@ -1,9 +1,4 @@
-import React, { Component } from 'react';
-
-var history = window.location.pathname;
-var hashHistory = window.location.hash;
-
-// console.log(history, hashHistory)
+import React, {Component} from 'react';
 
 const ZeFn = (from, to, back) => {
   if (!from || !to || !back) return
@@ -27,7 +22,7 @@ class Router extends Component {
   }
   componentWillMount() {
     window.addEventListener('hashchange', (e) => {
-//    console.log(e)
+      console.log(e)
       this.init(this.props);
     }, false)
     // window.onpopstate = (e) => {
@@ -42,7 +37,7 @@ class Router extends Component {
         DomList.push(React.cloneElement(item, {history: props.history ? props.history : '/'}));
       });
     }
-//  console.log(DomList)
+    console.log(DomList)
     this.setState({
       DomList,
     });
@@ -76,61 +71,4 @@ class Router extends Component {
   }
 }
 
-
-class Redirect extends Component {
-  constructor(props) {
-    super(props);
-  }
-  componentWillMount() {
-    // console.log(this.props);
-    window.location.href = `#${this.props.to}`;
-    // if (this.props.history && this.props.from && this.props.to) {
-    //   if (this.props.from === '*' || this.props.from === '/') {
-    //     window.location.href = `#${this.props.to}`;
-    //   } else {
-    //     const aa = `${this.props.history}/`.search(`#${this.props.from}/`);
-    //     if (aa === 0) {
-    //       window.location.href = `#${this.props.to}`
-    //     }
-    //   }
-    // }
-  }
-  render() {
-    return (<div ></div>)
-  }
-}
-
-// console.log(Redirect)
-
-class Route extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      Component: null
-    }
-  }
-  componentWillMount() {
-    this.setState({
-      Component: this.props.component
-    });
-  }
-  render() {
-    const { Component } = this.state;
-    return (<div >
-      {
-          Component ? <Component {...this.props} /> : null
-      }
-    </div>)
-  }
-}
-
-
-var Json = {
-  Router: Router,
-  Redirect: Redirect,
-  Route: Route,
-  hashHistory: hashHistory,
-  history: history
-}
-
-module.exports = Json;
+export default Router;
