@@ -6,7 +6,7 @@
 #### \<Redirect from="/" to="/index" /\> 重定向
 #### \<Route path="/" component={Ass}/\> 路由
 
-### gethub页面   https://github.com/yzfdldx/yzflhez-react-router
+### github页面   https://github.com/yzfdldx/yzflhez-react-router
 ### npm页面        https://www.npmjs.com/package/yzflhez-react-router
 ### 模块引入
 ##### ~ npm install yzflhez-react-router --save
