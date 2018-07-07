@@ -3,8 +3,8 @@
 ## 依赖react模块 
 
 #### \<Router history={hashHistory} \>\</Router\> 外包模块数据处理
-#### <Redirect from="/" to="/index" /> 重定向
-#### <Route path="/" component={Ass}/> 路由
+#### \<Redirect from="/" to="/index" /\> 重定向
+#### \<Route path="/" component={Ass}/\> 路由
 
 ### gethub页面   https://github.com/yzfdldx/yzflhez-react-router
 ### npm页面        https://www.npmjs.com/package/yzflhez-react-router
